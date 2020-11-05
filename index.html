@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>购物车</title>
+    <link rel="stylesheet" href="./index.css">
+    <script src="../../../jquery-3.5.1/jquery-3.5.1.min.js"></script>
+    <script src="./index.js"></script>
+</head>
+
+<body>
+    <!-- container 用于页面居中 -->
+    <div class="container">
+        <!-- 控制表格定位 -->
+        <div class="table">
+            <!-- 表格头 -->
+            <div class="thead">
+                <ul>
+                    <!-- 全选框 -->
+                    <li class="select_box">
+                        <input class="select_all1" type="checkbox">
+                    </li>
+                    <li>商品名称</li>
+                    <li>商品单价(元)</li>
+                    <li>商品存量(个)</li>
+                    <li>购买数量(个)</li>
+                    <li>商品总价(元)</li>
+                    <li>商品操作</li>
+                </ul>
+            </div>
+            <!-- 表格体 -->
+            <div class="tbody">
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>HTML</li>
+                    <!-- 单价 -->
+                    <li class="price">12.5</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="99">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="0">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>CSS</li>
+                    <!-- 单价 -->
+                    <li class="price">17.3</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="5">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="1">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>JavaScript</li>
+                    <!-- 单价 -->
+                    <li class="price">23.3</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="12">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="3">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>DOM</li>
+                    <!-- 单价 -->
+                    <li class="price">7.13</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="6">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="0">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>BOM</li>
+                    <!-- 单价 -->
+                    <li class="price">9.47</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="24">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="5">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>jQuery</li>
+                    <!-- 单价 -->
+                    <li class="price">34.1</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="9">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="9">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>ES6</li>
+                    <!-- 单价 -->
+                    <li class="price">45.2</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="48">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="7">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+                <ul>
+                    <!-- 单选框 -->
+                    <li class="select_box">
+                        <input class="select_one" type="checkbox">
+                    </li>
+                    <!-- 商品 -->
+                    <li>node</li>
+                    <!-- 单价 -->
+                    <li class="price">22</li>
+                    <!-- 库存 -->
+                    <!-- 库存可以输入，有增加，减少按钮 -->
+                    <li class="stock_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="stock" type="number" value="66">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 购买数量 -->
+                    <!-- 购买数量可以输入，有增加，减少按钮 -->
+                    <li class="purchase_box">
+                        <input class="btn" type="button" value="-">
+                        <input class="purchase" type="number" value="11">
+                        <input class="btn" type="button" value="+">
+                    </li>
+                    <!-- 总价 -->
+                    <li class="total_price">0</li>
+                    <!-- 删除 -->
+                    <li class="delete_box">
+                        <a class="delete" href="javascript:;">删除</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- 表格底 -->
+            <div class="tfoot">
+                <ul>
+                    <!-- 全选框 -->
+                    <li class="select_box">
+                        <input class="select_all2" type="checkbox">
+                    </li>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                    <li>总价：</li>
+                    <li class="sum">
+                        <span>0</span>
+                    </li>
+                    <li class="settlement">
+                        <a href="javascript:;">前往结算</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
