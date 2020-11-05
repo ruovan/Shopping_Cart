@@ -1,5 +1,3 @@
-// 今晚解决剩余问题：如何让购买数量与库存数量联动
-// Done！！！
 $(function () {
 
     // 全选单选
@@ -9,7 +7,7 @@ $(function () {
         $(".select_one").prop("checked", $(this).prop("checked"));
         $(".select_all2").prop("checked", $(this).prop("checked"));
         
-        // ------------------------------------、
+        // ------------------------------------
         // 选框改变事件触发计算总价事件
         getSum($(".total_price"));
     });
@@ -210,7 +208,10 @@ function judge(domEle, number) {
             // 1.判断购买数量是否大于库存值
             if (m >= n) {
                 // 如果购买数量大于等于了库存数量，购买数量就等于库存数量
-                $(domEle).siblings("[type=number]").prop("value",n);
+                $(domEle).siblings("[type=number]").prop("value", n);
+                // 购买数量变了一定要调用计算函数
+                Cal($(domEle).siblings("[type=number]"),n);
+                getSum($(".total_price"));
                 // 并且禁用增加按钮（当前就是增加按钮）
                 $(domEle).attr("disabled","disabled");
             }
@@ -242,7 +243,10 @@ function judge(domEle, number) {
                 // 因为这里是只进行判断，不进行赋值
                 // 所以这里先把购买数量赋值为要改变的值 number
                 $(domEle).parent().parent().find(".purchase").prop("value", number);
-                // 然后改变购买数量的增加按钮为禁用
+                // 然后计算总价
+                Cal($(domEle).parent().parent().find(".purchase"),number);
+                getSum($(".total_price"));
+                // 再改变购买数量的增加按钮为禁用
                 $($(domEle).parent().parent().find(".purchase").siblings(".btn")[1]).attr("disabled","disabled");
             }
         }
